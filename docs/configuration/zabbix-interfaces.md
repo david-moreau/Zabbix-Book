@@ -8,9 +8,8 @@ After clicking add, a drop-down menu will ask you to select the type of interfac
 
 ![interfaces](image/zabbix-interfaces/interfaces.png)
 
-|||
-|--|--|
 |Parameters|Description|
+|--|--|
 |Agent|Allows use of item keys of type Zabbix Agent and Zabbix Agent Active|
 |SNMP|Allows monitoring of the host via SNMP type items|
 |JMX|Allows monitoring of Java applications through JMX counters|
@@ -34,3 +33,7 @@ You can create several interfaces on a host, which may or may not be identical. 
 
 ???+ Tip
     If you want to monitor host with HTTP call, interface are not necessary.
+
+???+ Note
+    Use DNS for monitoring a host introduce a hard dependance between your monitoring infrastructure and your DNS infrastructure, IP adress is more reliable.
+    Zabbix has no builtin DNS caching that this is something that needs to be considered as Zabbix will do a lot of lookups.
